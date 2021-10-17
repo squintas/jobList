@@ -1,0 +1,58 @@
+.card-component,
+.company-container,
+.company-details,
+.job-info,
+.job-stack ul {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.card-component {
+  box-shadow: -2px 4px 15px 0px rgba(88, 116, 119, 0.5);
+  background-color: white;
+  justify-content: space-between;
+  margin: 20px 10%;
+  padding: 25px;
+  border-radius: 7px;
+  .company-container {
+    .job-name {
+      cursor: pointer;
+      font-size: 20px;
+      color: hsl(180, 14%, 20%);
+      font-weight: bold;
+      margin: 5px 0;
+    }
+    .job-name:hover {
+      font-size: 20px;
+      color: hsl(180, 29%, 50%);
+      font-weight: bold;
+    }
+    .company-details {
+      h3 {
+        font-size: 15px;
+        color: hsl(180, 29%, 50%);
+        font-weight: bold;
+      }
+    }
+    .job-info {
+      color: hsl(180, 8%, 52%);
+    }
+  }
+
+  .job-stack {
+    li {
+      cursor: pointer;
+      background-color: hsl(180, 31%, 95%);
+      border-radius: 7px;
+      padding: 7px;
+    }
+    li:hover {
+      background-color: hsl(180, 47%, 77%);
+    }
+  }
+}
+
+.remove {
+  display: none;
+}
