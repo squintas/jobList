@@ -1,19 +1,19 @@
 import "./filter.scss";
 
-function Filter({ filter }) {
+function Filter({ buttonsArray, clearArray }) {
   return (
     <div className="filter-component">
       <div className="buttons">
+        {buttonsArray.map((buttons) => {
+          return <button>{buttons}</button>;
+        })}
         <button
           onClick={() => {
-            filter("All");
+            clearArray();
           }}
         >
-          ALL
+          Clear
         </button>
-        <button className="frontend">Frontend</button>
-        <button>Fullstack</button>
-        <button>Clear</button>
       </div>
     </div>
   );

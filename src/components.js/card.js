@@ -1,13 +1,11 @@
 import "./card.scss";
-// import data from "../data.json";
-// import { useState } from "react";
 
 function Card({ jobContent, filter }) {
   return (
     <div>
       {jobContent.map((company) => {
         return (
-          <div className="card-component">
+          <div key={company.id} className="card-component">
             <div className="company-container">
               <div>
                 <img
@@ -33,13 +31,17 @@ function Card({ jobContent, filter }) {
 
             <div className="job-stack">
               <ul>
+                {/* <li onClick={() => filter(company.role)}>{company.role}</li> */}
                 <li onClick={() => filter(company.role)}>{company.role}</li>
                 <li onClick={() => filter(company.level)}>{company.level}</li>
-                <li>{company.languages}</li>
+
+                {company.languages.map((language) => {
+                  return <li>{language}</li>;
+                })}
+
                 <li className={company.tools.length < 1 ? "remove" : ""}>
                   {company.tools}
                 </li>
-                {/* <li>{teste()}</li> */}
               </ul>
             </div>
           </div>
@@ -50,11 +52,3 @@ function Card({ jobContent, filter }) {
 }
 
 export default Card;
-
-/* function teste() {
-  let tools = company.tools;
-
-  tools.forEach((item) => {
-    console.log(item);
-  });
-} */

@@ -11,15 +11,20 @@
 
   .buttons {
     margin-left: 25px;
+
     button {
-      border: 1px solid lightgray;
+      margin-right: 10px;
+      border: none;
       cursor: pointer;
       background-color: hsl(180, 31%, 95%);
       border-radius: 7px;
       padding: 7px;
+      color: hsl(180, 29%, 50%);
+      font-weight: bold;
+      letter-spacing: 0.05em;
     }
     button:hover {
-      background-color: hsl(180, 47%, 77%);
+      background-color: hsl(180, 65%, 89%);
     }
   }
 }
